@@ -1400,7 +1400,7 @@ static OutputStream *new_output_stream(OptionsContext *o, AVFormatContext *oc, e
     MATCH_PER_STREAM_OPT(disposition, str, ost->disposition, oc, st);
     ost->disposition = av_strdup(ost->disposition);
 
-    ost->max_muxing_queue_size = 128;
+    ost->max_muxing_queue_size = 1280;
     MATCH_PER_STREAM_OPT(max_muxing_queue_size, i, ost->max_muxing_queue_size, oc, st);
     ost->max_muxing_queue_size *= sizeof(AVPacket);
 
